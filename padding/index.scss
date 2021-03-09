@@ -1,0 +1,33 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+.wrap {
+  display: flex;
+  justify-content: space-between;
+}
+
+.inner {
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  flex: 1;
+  justify-content: center;
+  &:before {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background-color: red;
+    content: '';
+  }
+}
+
+.btn {
+  display: inline-block;
+  flex-shrink: 0;
+  width: 30px;
+  height: 30px;
+  padding: 5px;
+  background-color: orange;
+}

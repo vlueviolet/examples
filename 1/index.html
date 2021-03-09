@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>부모의 translate에 따른 하위 영향</title>
+  <link rel="stylesheet" href="../asset/global.css">
+  <link rel="stylesheet" href="./index.css">
+</head>
+<body>
+  <button type="button" class="btn-open">open layer</button>
+  <div class="layer-thumbnail">
+    <div class="layer-thumbnail-inner">
+      <div class="layer-thumbnail-list">
+        <div class="layer-thumbnail-list-item">
+          <img src="https://picsum.photos/id/109/500" alt="">
+        </div>
+        <div class="layer-thumbnail-list-item">
+          <img src="https://picsum.photos/id/112/500" alt="">
+        </div>
+        <div class="layer-thumbnail-list-item">
+          <img src="https://picsum.photos/id/110/500" alt="">
+        </div>
+        <div class="layer-thumbnail-list-item">
+          <img src="https://picsum.photos/id/111/500" alt="">
+        </div>
+        <div class="layer-thumbnail-list-item">
+          <img src="https://picsum.photos/id/113/500" alt="">
+        </div>
+        <div class="layer-thumbnail-list-item">
+          <img src="https://picsum.photos/id/114/500" alt="">
+        </div>
+      </div>
+      <button type="button" class="layer-btn-preview">미리보기</button>
+    </div>
+    <button type="button" class="layer-btn-close"><span class="blind">닫기</span>&#10005;</button>
+  </div>
+  <script src="https://naver.github.io/egjs-flicking/release/latest/dist/flicking.pkgd.min.js"></script>
+  <script src="./index.js"></script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+body {
+  background-color: #003488;
+}
+
+.wrapper {
+  overflow: hidden;
+  width: 200px;
+  height: 200px;
+  margin: 40px auto 0;
+  border-radius: 50%;
+  background-color: #fff;
+  -webkit-box-shadow: 0 2px 20px 0 black;
+          box-shadow: 0 2px 20px 0 black;
+}
+
+.img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+/*# sourceMappingURL=indes.css.map */

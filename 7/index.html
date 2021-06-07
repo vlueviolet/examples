@@ -63,13 +63,14 @@
       <p>📢열기, 링크</p>
     </div>
     <div>
-      <h2>내부에 텍스트 요소가 있는 경우</h2>
+      <h2>내부에 텍스트 요소가 있는 경우 (aria-label first!)</h2>
       <a href="#" aria-label="열기">
         <svg xmlns="http://www.w3.org/2000/svg" width="25" height="26">
           <path fill="none" stroke-linecap="round" stroke="currentColor" stroke-width="2" d="M6.5 16l6-6 6 6"></path>
         </svg>
         텍스트 요소가 있다면 aria-label을 과연 읽어줄까?
       </a>
+      <p>📢열기, 링크</p>
     </div>
   </section>
   
@@ -83,5 +84,24 @@
     </div>
   </section>
 
+  <section>
+    <h1>time</h1>
+    <div>
+      <h2>기본 타입</h2>
+      <time datetime="2021-06-07T09:52:14.995">
+        <span class="hm-blind">작성시간</span>
+        <span>3시간 전</span>
+      </time>
+      <p>📢</p>
+    </div>
+    <div>
+      <h2>role="presentation"</h2>
+      <time datetime="2021-06-07T09:52:14.995">
+        <span class="hm-blind">작성시간</span>
+        <span role="presentation">3시간 전</span>
+      </time>
+      <p>📢</p>
+    </div>
+  </section>
 </body>
 </html> 

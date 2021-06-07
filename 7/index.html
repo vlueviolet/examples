@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aria label 테스트</title>
+  <link rel="stylesheet" href="./index.css">
+</head>
+<body>
+  <section>
+    <h1>button 요소</h1>
+    <div>
+      <button type="button" class="button" aria-label="열기">
+        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="26">
+          <path fill="none" stroke-linecap="round" stroke="currentColor" stroke-width="2" d="M6.5 16l6-6 6 6"></path>
+        </svg>
+      </button>
+    </div>
+  </section>
+  <section>
+    <h1>i 요소</h1>
+    <div>
+      <h2>aria-label only</h2>
+      <i aria-label="대체텍스트">
+        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="26">
+          <path fill="none" stroke-linecap="round" stroke="currentColor" stroke-width="2" d="M6.5 16l6-6 6 6"></path>
+        </svg>
+      </i>
+    </div>
+    <div>
+      <h2>role='img'</h2>
+      <i role="img" aria-label="대체텍스트">
+        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="26">
+          <path fill="none" stroke-linecap="round" stroke="currentColor" stroke-width="2" d="M6.5 16l6-6 6 6"></path>
+        </svg>
+      </i>
+    </div>
+    <div>
+      <h2>role='text'</h2>
+      <i role="text" aria-label="대체텍스트">
+        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="26">
+          <path fill="none" stroke-linecap="round" stroke="currentColor" stroke-width="2" d="M6.5 16l6-6 6 6"></path>
+        </svg>
+      </i>
+    </div>
+  </section>
+  <section>
+    <h1>label-input</h1>
+    <div>
+      <label aria-label="Add New Series">
+        <input type="text" placeholder="Add New Series" id="seriesInput">
+      </label>
+    </div>
+  </section>
+
+</body>
+</html> 

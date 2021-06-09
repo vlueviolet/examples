@@ -45,3 +45,14 @@ div {
   height: 1px;
   margin: -1px;
 }
+
+.after {
+  overflow: hidden;
+
+  &:after {
+    position: absolute;
+    top: -100px;
+    left: -100px;
+    content: ':00';
+  }
+}

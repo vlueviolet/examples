@@ -4,24 +4,26 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Aria label 테스트</title>
+  <title>접근성 시분초 테스트</title>
   <link rel="stylesheet" href="./index.css">
 </head>
 <body>
   <section>
     <h1>시분초</h1>
-    
     <div>
+      <h2>콜론(:)으로 구분하기</h2>
       <span>12:15:20</span>
       <p>📢12 콜론 15 콜론 20 콜론</p>
     </div>
 
     <div>
+      <h2>초 단위를 blind로 추가하기</h2>
       <span role="text">12:15<span class="blind">:00</span></span>
       <p>📢12 콜론 15 콜론 0 콜론</p>
     </div>
     
     <div>
+      <h2>'시, 분, 초'를 blind로 제공</h2>
       <span role="text">
         12<span class="blind">시</span>
         12<span class="blind">분</span>
@@ -31,6 +33,7 @@
     </div>
     
     <div>
+      <h2>time 요소로 제공, 중복 제공은 aria-hidden 처리</h2>
       <time datetime="2021-06-09T12:10:10">
         <span class="hm-blind">작성시간</span>
         <span aria-hidden="true">3시간 전</span>

@@ -7,8 +7,7 @@
   font-weight: bold;
   font-size: 2rem;
   color: #fff;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
 }
 
 .layer-thumbnail {
@@ -18,17 +17,12 @@
   width: 100%;
   height: 100%;
   background-color: #fff;
-  -webkit-transform: translateY(100%);
-          transform: translateY(100%);
-  -webkit-transition: -webkit-transform .2s ease-out;
-  transition: -webkit-transform .2s ease-out;
+  transform: translateY(100%);
   transition: transform .2s ease-out;
-  transition: transform .2s ease-out, -webkit-transform .2s ease-out;
 }
 
 .layer-thumbnail.is-show {
-  -webkit-transform: translateY(0);
-          transform: translateY(0);
+  transform: translateY(0);
 }
 
 .layer-thumbnail-inner {
@@ -57,8 +51,7 @@
 .layer-thumbnail-list-item img {
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 
 .layer-thumbnail .layer-btn-preview {
@@ -70,8 +63,7 @@
   height: 40px;
   background-color: #000;
   color: #fff;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
+  transform: translateX(-50%);
 }
 
 .layer-thumbnail .layer-btn-close {

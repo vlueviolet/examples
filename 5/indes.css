@@ -15,14 +15,19 @@ h1 {
 }
 
 .flex-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin: 3rem;
   background: lightgrey;
 }
 
 .flex-item {
-  flex-basis: 100px;
+  -ms-flex-preferred-size: 100px;
+      flex-basis: 100px;
   margin: 1rem;
   font-size: 3rem;
   font-weight: bold;

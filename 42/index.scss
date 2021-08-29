@@ -1,58 +1,193 @@
-html,
-body {
-  margin: 0;
-  padding: 0;
-}
+$red: rgb(255, 141, 141);
+$orange: rgb(243, 209, 135);
+$green: rgb(111, 214, 209);
+$violet: rgb(185, 159, 245);
+$navy: rgb(58, 112, 212);
+$pink: rgb(207, 119, 223);
 
-a,
-a:hover,
-a:active {
-  color: currentColor;
-  text-decoration: none;
-}
+$border-radius: 10px;
 
-section {
-  margin: 10px;
-  padding: 30px;
-  border: 1px solid #2a2a2a;
-
-  &+section {
-    margin-top: 30px;
-  }
-}
-
-h1 {
-  border-bottom: 1px solid black;
-  font-weight: bold;
-  font-size: 20px;
-}
-
-h2 {
-  background-color: rgb(223, 223, 223);
-  font-weight: normal;
-  font-size: 17px;
-}
-
-div {
-  padding: 20px;
-}
-
-.blind {
+#wrap {
   overflow: hidden;
+  height: 100vh;
+}
+
+.item {
   position: absolute;
-  clip: rect(0 0 0 0);
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-}
+  font-size: 0;
 
-.after {
-  overflow: hidden;
+  &1 {
+    top: 10px;
+    left: -300px;
+  }
 
-  &:after {
+  &2 {
+    bottom: -600px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  &3 {
+    top: 10px;
+    right: -600px;
+
+    // .item__img {
+    //   transform: rotate(-90deg) translateX(-100%);
+    //   transform-origin: top left;
+    // }
+  }
+
+  &4 {
+    top: 350px;
+    left: -600px;
+  }
+
+  &5 {
+    top: 700px;
+    left: -600px;
+  }
+
+  &6 {
+    top: 350px;
+    right: -300px;
+  }
+
+  &7 {
+    bottom: -300px;
+    left: 100px;
+  }
+
+  &8 {
+    bottom: -200px;
+    right: -600px;
+  }
+
+  .item__num {
     position: absolute;
-    top: -100px;
-    left: -100px;
-    content: ':00';
+    top: 10px;
+    left: 10px;
+    z-index: 10;
+    padding: 5px;
+    background-color: #fff;
+    font-size: 30px;
+  }
+
+  .item__img {
+    display: inline-block;
+    overflow: hidden;
+    position: relative;
+    border-radius: $border-radius;
+  }
+
+  .item__link {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  &__shadow {
+    position: absolute;
+    z-index: -1;
+
+    &--to-bottom {
+      top: calc(100% - #{$border-radius});
+      left: 0;
+      width: 100%;
+      height: 900px;
+
+      &.item__shadow--red {
+        background: linear-gradient(to bottom, $red 70%, transparent);
+      }
+
+      &.item__shadow--orange {
+        background: linear-gradient(to bottom, $orange 70%, transparent);
+      }
+
+      &.item__shadow--green {
+        background: linear-gradient(to bottom, $green 70%, transparent);
+      }
+
+      &.item__shadow--violet {
+        background: linear-gradient(to bottom, $violet 70%, transparent);
+      }
+
+      &.item__shadow--navy {
+        background: linear-gradient(to bottom, $navy 70%, transparent);
+      }
+
+      &.item__shadow--pink {
+        background: linear-gradient(to bottom, $pink 70%, transparent);
+      }
+    }
+
+    &--to-left {
+      top: 0;
+      left: auto;
+      right: calc(100% - #{$border-radius});
+      width: 900px;
+      height: 100%;
+
+      &.item__shadow--red {
+        background: linear-gradient(to left, $red 70%, transparent);
+      }
+
+      &.item__shadow--orange {
+        background: linear-gradient(to left, $orange 70%, transparent);
+      }
+
+      &.item__shadow--green {
+        background: linear-gradient(to left, $green 70%, transparent);
+      }
+
+      &.item__shadow--violet {
+        background: linear-gradient(to left, $violet 70%, transparent);
+      }
+
+      &.item__shadow--navy {
+        background: linear-gradient(to left, $navy 70%, transparent);
+      }
+
+      &.item__shadow--pink {
+        background: linear-gradient(to left, $pink 70%, transparent);
+      }
+    }
+
+    &--to-right {
+      bottom: 0;
+      left: calc(100% - #{$border-radius});
+      width: 900px;
+      height: 100%;
+
+      &.item__shadow--half {
+        height: 50%;
+      }
+
+      &.item__shadow--red {
+        background: linear-gradient(to right, $red 70%, transparent);
+      }
+
+      &.item__shadow--orange {
+        background: linear-gradient(to right, $orange 70%, transparent);
+      }
+
+      &.item__shadow--green {
+        background: linear-gradient(to right, $green 70%, transparent);
+      }
+
+      &.item__shadow--violet {
+        background: linear-gradient(to right, $violet 70%, transparent);
+      }
+
+      &.item__shadow--navy {
+        background: linear-gradient(to right, $navy 70%, transparent);
+      }
+
+      &.item__shadow--pink {
+        background: linear-gradient(to right, $pink 70%, transparent);
+      }
+    }
   }
 }

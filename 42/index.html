@@ -1,67 +1,92 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>접근성 시분초 테스트</title>
-  <link rel="stylesheet" href="./index.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GSAP TEST</title>
+    <link rel="stylesheet" href="../asset/reset.css">
+    <link rel="stylesheet" href="./index.css">
 </head>
+
 <body>
-  <section>
-    <h1>시분초</h1>
-    <div>
-      <h2>콜론(:)으로 구분하기</h2>
-      <span>12:15:20</span>
-      <p>📢12시 15분 20초</p>
+    <div id="wrap">
+        <div class="item item1">
+            <em class="item__num">1</em>
+            <div class="item__img">
+                <img src="https://picsum.photos/id/10/300/300" alt="">
+                <a href="#" class="item__link"><span class="blind">제품 링크</span></a>
+            </div>
+            <div class="item__shadow item__shadow--to-left item__shadow--red"></div>
+        </div>
+
+        <div class="item item2">
+            <em class="item__num">2</em>
+            <div class="item__img">
+                <img src="https://picsum.photos/id/1003/300/600" alt="">
+                <a href="#" class="item__link"><span class="blind">제품 링크</span></a>
+            </div>
+            <div class="item__shadow item__shadow--to-bottom item__shadow--orange"></div>
+        </div>
+
+        <div class="item item3">
+            <em class="item__num">3</em>
+            <div class="item__img">
+                <img src="https://picsum.photos/id/1003/600/300" alt="">
+                <a href="#" class="item__link"><span class="blind">제품 링크</span></a>
+            </div>
+            <div class="item__shadow item__shadow--to-right item__shadow--green"></div>
+        </div>
+        
+        <div class="item item4">
+          <em class="item__num">4</em>
+          <div class="item__img">
+            <img src="https://picsum.photos/id/1003/600/300" alt="">
+            <a href="#" class="item__link"><span class="blind">제품 링크</span></a>
+          </div>
+          <div class="item__shadow item__shadow--to-left item__shadow--pink"></div>
+        </div>
+        
+        <div class="item item5">
+          <em class="item__num">5</em>
+          <div class="item__img">
+            <img src="https://picsum.photos/id/1003/600/300" alt="">
+            <a href="#" class="item__link"><span class="blind">제품 링크</span></a>
+          </div>
+          <div class="item__shadow item__shadow--to-left item__shadow--navy"></div>
+        </div>
+
+        <div class="item item6">
+            <em class="item__num">6</em>
+            <div class="item__img">
+                <img src="https://picsum.photos/id/1003/300/600" alt="">
+                <a href="#" class="item__link"><span class="blind">제품 링크</span></a>
+            </div>
+            <div class="item__shadow item__shadow--to-right item__shadow--half item__shadow--violet"></div>
+        </div>
+
+        <div class="item item7">
+            <em class="item__num">7</em>
+            <div class="item__img">
+                <img src="https://picsum.photos/id/1003/300/300" alt="">
+                <a href="#" class="item__link"><span class="blind">제품 링크</span></a>
+            </div>
+            <div class="item__shadow item__shadow--to-bottom item__shadow--red"></div>
+        </div>
+
+        <div class="item item8">
+            <em class="item__num">8</em>
+            <div class="item__img">
+                <img src="https://picsum.photos/id/1003/600/300" alt="">
+                <a href="#" class="item__link"><span class="blind">제품 링크</span></a>
+            </div>
+            <div class="item__shadow item__shadow--to-right item__shadow--green"></div>
+        </div>
     </div>
 
-    <div>
-      <h2>초 단위를 blind로 추가하기</h2>
-      <span role="text">12:15<span class="blind">:00</span></span>
-      <p>📢12 콜론 15 콜론 0</p>
-    </div>
-
-    <div>
-      <h2>초 단위를 after로 추가하기</h2>
-      <span class="after" role="text">12:15</span>
-      <p>📢12 콜론 15 콜론 0</p>
-    </div>
-    
-    <div>
-      <h2>'시, 분, 초'를 blind로 제공</h2>
-      <span role="text">
-        12<span class="blind">시</span>
-        12<span class="blind">분</span>
-        12<span class="blind">초</span>
-      </span>
-      <p>📢12 시 15 분 20 초</p>
-    </div>
-    
-    <div>
-      <h2>time 요소로 제공, 중복 제공은 aria-hidden 처리</h2>
-      <time datetime="2021-06-09T12:10:10">
-        <span class="hm-blind">작성시간</span>
-        <span aria-hidden="true">3시간 전</span>
-      </time>      
-      <p>📢작성시간, 2021년 6월 9일 오후 12:10:10</p>
-    </div>
-
-    <div>
-      <h2>time 요소로 시, 분만 입력</h2>
-      <time datetime="10:10">
-        <span class="hm-blind">작성시간</span>
-        <span aria-hidden="true">10:10</span>
-      </time>      
-      <time datetime="14:54:10">
-        <span class="hm-blind">작성시간</span>
-        <span aria-hidden="true">14:54</span>
-      </time>
-      <time datetime="PT1H20M">재생 시간<span aria-hidden="true">1:20</span></time>
-
-      <p>📢작성시간, 오전 10시 10분</p>
-    </div>
-    
-  </section>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
+    <script src="./index.js"></script>
 </body>
-</html> 
+
+</html>

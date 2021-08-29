@@ -1,58 +1,198 @@
-html,
-body {
-  margin: 0;
-  padding: 0;
-}
-
-a,
-a:hover,
-a:active {
-  color: currentColor;
-  text-decoration: none;
-}
-
-section {
-  margin: 10px;
-  padding: 30px;
-  border: 1px solid #2a2a2a;
-}
-
-section + section {
-  margin-top: 30px;
-}
-
-h1 {
-  border-bottom: 1px solid black;
-  font-weight: bold;
-  font-size: 20px;
-}
-
-h2 {
-  background-color: #dfdfdf;
-  font-weight: normal;
-  font-size: 17px;
-}
-
-div {
-  padding: 20px;
-}
-
-.blind {
+#wrap {
   overflow: hidden;
-  position: absolute;
-  clip: rect(0 0 0 0);
-  width: 1px;
-  height: 1px;
-  margin: -1px;
+  height: 100vh;
 }
 
-.after {
+.item {
+  position: absolute;
+  font-size: 0;
+}
+
+.item1 {
+  top: 10px;
+  left: -300px;
+}
+
+.item2 {
+  bottom: -600px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.item3 {
+  top: 10px;
+  right: -600px;
+}
+
+.item4 {
+  top: 350px;
+  left: -600px;
+}
+
+.item5 {
+  top: 700px;
+  left: -600px;
+}
+
+.item6 {
+  top: 350px;
+  right: -300px;
+}
+
+.item7 {
+  bottom: -300px;
+  left: 100px;
+}
+
+.item8 {
+  bottom: -200px;
+  right: -600px;
+}
+
+.item .item__num {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: 10;
+  padding: 5px;
+  background-color: #fff;
+  font-size: 30px;
+}
+
+.item .item__img {
+  display: inline-block;
   overflow: hidden;
+  position: relative;
+  border-radius: 10px;
 }
 
-.after:after {
+.item .item__link {
+  display: none;
   position: absolute;
-  top: -100px;
-  left: -100px;
-  content: ':00';
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.item__shadow {
+  position: absolute;
+  z-index: -1;
+}
+
+.item__shadow--to-bottom {
+  top: calc(100% - 10px);
+  left: 0;
+  width: 100%;
+  height: 900px;
+}
+
+.item__shadow--to-bottom.item__shadow--red {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(70%, #ff8d8d), to(transparent));
+  background: linear-gradient(to bottom, #ff8d8d 70%, transparent);
+}
+
+.item__shadow--to-bottom.item__shadow--orange {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(70%, #f3d187), to(transparent));
+  background: linear-gradient(to bottom, #f3d187 70%, transparent);
+}
+
+.item__shadow--to-bottom.item__shadow--green {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(70%, #6fd6d1), to(transparent));
+  background: linear-gradient(to bottom, #6fd6d1 70%, transparent);
+}
+
+.item__shadow--to-bottom.item__shadow--violet {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(70%, #b99ff5), to(transparent));
+  background: linear-gradient(to bottom, #b99ff5 70%, transparent);
+}
+
+.item__shadow--to-bottom.item__shadow--navy {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(70%, #3a70d4), to(transparent));
+  background: linear-gradient(to bottom, #3a70d4 70%, transparent);
+}
+
+.item__shadow--to-bottom.item__shadow--pink {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(70%, #cf77df), to(transparent));
+  background: linear-gradient(to bottom, #cf77df 70%, transparent);
+}
+
+.item__shadow--to-left {
+  top: 0;
+  left: auto;
+  right: calc(100% - 10px);
+  width: 900px;
+  height: 100%;
+}
+
+.item__shadow--to-left.item__shadow--red {
+  background: -webkit-gradient(linear, right top, left top, color-stop(70%, #ff8d8d), to(transparent));
+  background: linear-gradient(to left, #ff8d8d 70%, transparent);
+}
+
+.item__shadow--to-left.item__shadow--orange {
+  background: -webkit-gradient(linear, right top, left top, color-stop(70%, #f3d187), to(transparent));
+  background: linear-gradient(to left, #f3d187 70%, transparent);
+}
+
+.item__shadow--to-left.item__shadow--green {
+  background: -webkit-gradient(linear, right top, left top, color-stop(70%, #6fd6d1), to(transparent));
+  background: linear-gradient(to left, #6fd6d1 70%, transparent);
+}
+
+.item__shadow--to-left.item__shadow--violet {
+  background: -webkit-gradient(linear, right top, left top, color-stop(70%, #b99ff5), to(transparent));
+  background: linear-gradient(to left, #b99ff5 70%, transparent);
+}
+
+.item__shadow--to-left.item__shadow--navy {
+  background: -webkit-gradient(linear, right top, left top, color-stop(70%, #3a70d4), to(transparent));
+  background: linear-gradient(to left, #3a70d4 70%, transparent);
+}
+
+.item__shadow--to-left.item__shadow--pink {
+  background: -webkit-gradient(linear, right top, left top, color-stop(70%, #cf77df), to(transparent));
+  background: linear-gradient(to left, #cf77df 70%, transparent);
+}
+
+.item__shadow--to-right {
+  bottom: 0;
+  left: calc(100% - 10px);
+  width: 900px;
+  height: 100%;
+}
+
+.item__shadow--to-right.item__shadow--half {
+  height: 50%;
+}
+
+.item__shadow--to-right.item__shadow--red {
+  background: -webkit-gradient(linear, left top, right top, color-stop(70%, #ff8d8d), to(transparent));
+  background: linear-gradient(to right, #ff8d8d 70%, transparent);
+}
+
+.item__shadow--to-right.item__shadow--orange {
+  background: -webkit-gradient(linear, left top, right top, color-stop(70%, #f3d187), to(transparent));
+  background: linear-gradient(to right, #f3d187 70%, transparent);
+}
+
+.item__shadow--to-right.item__shadow--green {
+  background: -webkit-gradient(linear, left top, right top, color-stop(70%, #6fd6d1), to(transparent));
+  background: linear-gradient(to right, #6fd6d1 70%, transparent);
+}
+
+.item__shadow--to-right.item__shadow--violet {
+  background: -webkit-gradient(linear, left top, right top, color-stop(70%, #b99ff5), to(transparent));
+  background: linear-gradient(to right, #b99ff5 70%, transparent);
+}
+
+.item__shadow--to-right.item__shadow--navy {
+  background: -webkit-gradient(linear, left top, right top, color-stop(70%, #3a70d4), to(transparent));
+  background: linear-gradient(to right, #3a70d4 70%, transparent);
+}
+
+.item__shadow--to-right.item__shadow--pink {
+  background: -webkit-gradient(linear, left top, right top, color-stop(70%, #cf77df), to(transparent));
+  background: linear-gradient(to right, #cf77df 70%, transparent);
 }
